@@ -1,0 +1,23 @@
+{
+  "name": "auto_website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "axios": "^1.2.0",
+    "sass": "^1.54.0",
+    "vue3-picture-swipe": "^3.0.6",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.0",
+    "nuxt-vite": "^0.3.5",
+    "vite": "^3.0.0"
+  }
+}

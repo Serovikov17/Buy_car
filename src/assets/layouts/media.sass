@@ -1,0 +1,135 @@
+@media (max-width: 1400px)
+    .container
+        max-width: 1320px
+    .header
+        &__header
+            padding: 0 15px
+    .brands
+        &__brand
+            padding: 0 15px
+    .list
+        &__items
+            padding: 0 15px
+            &-cars
+                justify-content: center
+                column-gap: 30px
+        &__overlay
+            &-window
+                margin: 0
+                position: absolute
+                max-height: 98%
+                left: 0
+
+@media (max-width: 1200px)
+    .container
+        max-width: 1140px
+    .brands
+        &__brand
+            &-item
+                width: 550px
+                &-brand
+                    &-text, &-choice
+                        margin-bottom: 15px
+                &-model
+                    &-text
+                        margin-left: 0
+    .list
+        &__overlay
+            &-window
+                max-height: 97%
+
+@media (max-width: 992px)
+    .container
+        max-width: 960px
+
+    .information
+        &__overlay
+            &-window
+                margin: 8% auto
+                padding: 5px
+                height: auto
+                max-width: 650px
+                &-description
+                    display: block
+                    &-company, &-managers
+                        padding: 0 10px
+                    hr
+                        height: 0
+                        width: auto
+                    &-managers
+                        &-contacts
+                            justify-content: start
+                            &-names
+                                margin-right: 35%
+    .list
+        &__overlay
+            &-window
+                max-height: 98%
+
+@media (max-width: 768px)
+    .container
+        max-width: 720px
+    .information
+        &__overlay
+            &-window
+                &-description
+                    &-managers
+                        &-contacts
+                            &-names
+                                margin-right: 30%
+    .brands
+        &__brand
+            &-item
+                width: 282px
+                &-brand, &-model
+                    &-choice
+                        margin-top: 5px
+                        margin-right: 6px
+    .list
+        &__overlay
+            &-window
+                max-height: 99%
+                padding: 5px
+
+@media (max-width: 576px)
+    .container
+        max-width: 540px
+
+    .header
+        &__header
+            &-menu
+                width: 100px
+                text-align: right
+
+    .information
+        &__overlay
+            &-window
+                position: absolute
+                margin: 0 auto
+                max-height: 99%
+                width: auto
+                overflow-y: auto
+                &-description
+                    &-managers
+                        &-contacts
+                            justify-content: space-between
+
+    .list
+        &__overlay
+            &-window
+                padding: 5px
+                max-height: 99%
+                &-specifications
+                    &-info
+                        column-width: 48%
+                        column-count: 1
+                        column-gap: 0
+                &-phone
+                    display: block
+                    width: 230px
+                    margin: 0 auto 15px
+                    p
+                        margin-bottom: 15px
+                        text-align: center
+                        a
+                            margin-left: 0
