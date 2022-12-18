@@ -38,63 +38,66 @@ const idSelectedItem = ref();
           class="list__items-cars"
           v-if="props.msgData.brand == '' && props.msgData.model == ''"
         >
-          <div
+          <a
             :id="cars.id"
-            @click="(idSelectedItem = $event.target.id), (showOverlay = true)"
+            @click="
+              (idSelectedItem = $event.target.id.replace(/[^0-9\.]+/g, '')),
+                (showOverlay = true)
+            "
             class="list__items-cars-item"
             v-for="cars in carsData"
             :key="cars.id"
             ref="test"
           >
             <img
-              :id="cars.id"
               class="list__items-cars-item-img"
               :src="`images/${cars.id}/${cars.photo.img1}`"
               alt="Авто_1"
             />
-            <h3 :id="cars.id" class="list__items-cars-item-subtitle">
+            <h3 class="list__items-cars-item-subtitle">
               {{ cars.brand }} {{ cars.model }}
             </h3>
-            <p :id="cars.id" class="list__items-cars-item-specifications">
+            <p class="list__items-cars-item-specifications">
               {{ cars.engine }}, {{ cars.transmission }}, {{ cars.release }}
             </p>
-            <p :id="cars.id" class="list__items-cars-item-price">
-              {{ cars.price }} &#8381;
-            </p>
-          </div>
+            <p class="list__items-cars-item-price">{{ cars.price }} &#8381;</p>
+          </a>
         </div>
         <div class="list__items-cars" v-else-if="props.msgData.model == ''">
-          <div
+          <a
             :id="cars.id"
             class="list__items-cars-item"
-            @click="(idSelectedItem = $event.target.id), (showOverlay = true)"
+            @click="
+              (idSelectedItem = $event.target.id.replace(/[^0-9\.]+/g, '')),
+                (showOverlay = true)
+            "
             v-for="cars in (arr = carsData.filter(
               (cars) => cars.brand == props.msgData.brand
             ))"
             :key="cars.id"
           >
             <img
-              :id="cars.id"
               class="list__items-cars-item-img"
               :src="`images/${cars.id}/${cars.photo.img1}`"
               alt="Авто_1"
             />
-            <h3 :id="cars.id" class="list__items-cars-item-subtitle">
+            <h3 class="list__items-cars-item-subtitle">
               {{ cars.brand }} {{ cars.model }}
             </h3>
-            <p :id="cars.id" class="list__items-cars-item-specifications">
+            <p class="list__items-cars-item-specifications">
               {{ cars.engine }}, {{ cars.transmission }}, {{ cars.release }}
             </p>
-            <p :id="cars.id" class="list__items-cars-item-price">
-              {{ cars.price }} &#8381;
-            </p>
-          </div>
+            <p class="list__items-cars-item-price">{{ cars.price }} &#8381;</p>
+          </a>
         </div>
         <div class="list__items-cars" v-else>
-          <div
+          <a
             :id="cars.id"
             class="list__items-cars-item"
-            @click="(idSelectedItem = $event.target.id), (showOverlay = true)"
+            @click="
+              (idSelectedItem = $event.target.id.replace(/[^0-9\.]+/g, '')),
+                (showOverlay = true)
+            "
             v-for="cars in (arr = carsData.filter(
               (cars) =>
                 cars.brand == props.msgData.brand && cars.model == props.msgData.model
@@ -102,21 +105,18 @@ const idSelectedItem = ref();
             :key="cars.id"
           >
             <img
-              :id="cars.id"
               class="list__items-cars-item-img"
               :src="`images/${cars.id}/${cars.photo.img1}`"
               alt="Авто_1"
             />
-            <h3 :id="cars.id" class="list__items-cars-item-subtitle">
+            <h3 class="list__items-cars-item-subtitle">
               {{ cars.brand }} {{ cars.model }}
             </h3>
-            <p :id="cars.id" class="list__items-cars-item-specifications">
+            <p class="list__items-cars-item-specifications">
               {{ cars.engine }}, {{ cars.transmission }}, {{ cars.release }}
             </p>
-            <p :id="cars.id" class="list__items-cars-item-price">
-              {{ cars.price }} &#8381;
-            </p>
-          </div>
+            <p class="list__items-cars-item-price">{{ cars.price }} &#8381;</p>
+          </a>
         </div>
       </div>
     </div>

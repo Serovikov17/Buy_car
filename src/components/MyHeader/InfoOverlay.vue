@@ -12,7 +12,7 @@ const props = defineProps({
       <div class="container">
         <div class="information__overlay-window">
           <div class="information__overlay-window-close">
-            <button @click="$emit('closeInfo')">Закрыть</button>
+            <button class="btn__close" @click="$emit('closeInfo')">Закрыть</button>
           </div>
           <div class="information__overlay-window-description">
             <div class="information__overlay-window-description-company">

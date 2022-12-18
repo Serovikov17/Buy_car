@@ -20,7 +20,7 @@ const props = defineProps({
         :key="car.id"
       >
         <div class="list__overlay-window-close">
-          <button @click="$emit('close')">Закрыть</button>
+          <button class="btn__close" @click="$emit('close')">Закрыть</button>
         </div>
         <div class="list__overlay-window-gallery">
           <vue-picture-swipe
