@@ -50,17 +50,23 @@ const idSelectedItem = ref();
             ref="test"
           >
             <img
+              :id="`img-` + cars.id"
               class="list__items-cars-item-img"
               :src="`images/${cars.id}/${cars.photo.img1}`"
               alt="Авто_1"
             />
-            <h3 class="list__items-cars-item-subtitle">
+            <h3 :id="`subtitle-` + cars.id" class="list__items-cars-item-subtitle">
               {{ cars.brand }} {{ cars.model }}
             </h3>
-            <p class="list__items-cars-item-specifications">
+            <p
+              :id="`specifications-` + cars.id"
+              class="list__items-cars-item-specifications"
+            >
               {{ cars.engine }}, {{ cars.transmission }}, {{ cars.release }}
             </p>
-            <p class="list__items-cars-item-price">{{ cars.price }} &#8381;</p>
+            <p :id="`price-` + cars.id" class="list__items-cars-item-price">
+              {{ cars.price }} &#8381;
+            </p>
           </a>
         </div>
         <div class="list__items-cars" v-else-if="props.msgData.model == ''">
@@ -77,17 +83,23 @@ const idSelectedItem = ref();
             :key="cars.id"
           >
             <img
+              :id="`img-` + cars.id"
               class="list__items-cars-item-img"
               :src="`images/${cars.id}/${cars.photo.img1}`"
               alt="Авто_1"
             />
-            <h3 class="list__items-cars-item-subtitle">
+            <h3 :id="`subtitle-` + cars.id" class="list__items-cars-item-subtitle">
               {{ cars.brand }} {{ cars.model }}
             </h3>
-            <p class="list__items-cars-item-specifications">
+            <p
+              :id="`specifications-` + cars.id"
+              class="list__items-cars-item-specifications"
+            >
               {{ cars.engine }}, {{ cars.transmission }}, {{ cars.release }}
             </p>
-            <p class="list__items-cars-item-price">{{ cars.price }} &#8381;</p>
+            <p :id="`price-` + cars.id" class="list__items-cars-item-price">
+              {{ cars.price }} &#8381;
+            </p>
           </a>
         </div>
         <div class="list__items-cars" v-else>
@@ -105,17 +117,23 @@ const idSelectedItem = ref();
             :key="cars.id"
           >
             <img
+              :id="`img-` + cars.id"
               class="list__items-cars-item-img"
               :src="`images/${cars.id}/${cars.photo.img1}`"
               alt="Авто_1"
             />
-            <h3 class="list__items-cars-item-subtitle">
+            <h3 :id="`subtitle-` + cars.id" class="list__items-cars-item-subtitle">
               {{ cars.brand }} {{ cars.model }}
             </h3>
-            <p class="list__items-cars-item-specifications">
+            <p
+              :id="`specifications-` + cars.id"
+              class="list__items-cars-item-specifications"
+            >
               {{ cars.engine }}, {{ cars.transmission }}, {{ cars.release }}
             </p>
-            <p class="list__items-cars-item-price">{{ cars.price }} &#8381;</p>
+            <p :id="`price-` + cars.id" class="list__items-cars-item-price">
+              {{ cars.price }} &#8381;
+            </p>
           </a>
         </div>
       </div>
